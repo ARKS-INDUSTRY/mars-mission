@@ -1,0 +1,124 @@
+------------------------------------------------------------------
+                        Data for mars weather
+
+api key  = pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY
+
+api link to get the json data from nasa = https://api.nasa.gov/insight_weather/?api_key=_YOUR_API_KEY_&feedtype=json&ver=1.0
+
+api link for checking test results = https://api.nasa.gov/insight_weather/?api_key=pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY=json&ver=1.0
+
+
+------------------------------------------------------------------
+                        Data for rover images
+rover api link = https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=_CAMARA_TYPE_&api_key=API_KEY
+
+
+---------------+-----------------------------+---------+-----------+------+
+Abbreviation	|Camera	                     |Curiosity|OpportunitY|Spirit|
+---------------+-----------------------------+---------+-----------+------+
+FHAZ	         |Front Hazard Avoidance Camera|	✔	    |     ✔	   |   ✔  |
+---------------+-----------------------------+---------+-----------+------+
+RHAZ	         |Rear Hazard Avoidance Camera	|  ✔	    |     ✔	   |   ✔  |
+---------------+-----------------------------+---------+-----------+------+
+MAST	         |Mast Camera	               |  ✔      |           |      |
+---------------+-----------------------------+---------+-----------+------+
+CHEMCAM	      |Chemistry and Camera Complex	|  ✔      |           |      |
+---------------+-----------------------------+---------+-----------+------+
+MAHLI	         |Mars Hand Lens Imager	      |  ✔      |           |      |
+---------------+-----------------------------+---------+-----------+------+
+MARDI	         |Mars Descent Imager	         |  ✔      |           |      |
+---------------+-----------------------------+---------+-----------+------+
+NAVCAM	      |Navigation Camera	         |  ✔      |      ✔	|    ✔  |
+---------------+-----------------------------+---------+-----------+--------+
+PANCAM	      |Panoramic Camera	            |         |      ✔    |     ✔ |
+---------------+-----------------------------+---------+-----------+--------+
+MINITES	      |Miniature                    |         |       ✔	 |    ✔  |
+---------------+-----------------------------+---------+-----------+--------+
+
+camera types
+
+FHAZ= https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=fhaz&api_key=pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY
+
+RHAZ = https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=rhaz&api_key=pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY
+
+MAST = https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=mast&api_key=pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY
+
+CHEMCAM = https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=chemcam&api_key=pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY
+
+MAHLI = https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=mahli&api_key=pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY
+
+MARDI = https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=mardi&api_key=pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY
+
+NAVCAM = https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=navcam&api_key=pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY
+
+PANCAM = https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=pancam&api_key=pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY
+
+MINITES = https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=minites&api_key=pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY
+
+rover manifest data  =
+
+------------------+--------------------------------------------------------+
+Key	            |  Description                                           |
+------------------+--------------------------------------------------------+
+name	            |  Name of the Rover                                     |
+------------------+--------------------------------------------------------+
+landing_date	   |  The Rover's landing date on Mars                      |
+------------------+--------------------------------------------------------+
+launch_date	      |  The Rover's launch date from Earth                    |
+------------------+--------------------------------------------------------+
+status	         |  The Rover's mission status                            |
+------------------+--------------------------------------------------------+
+max_sol	         |  The most recent Martian sol from which photos exist   |
+------------------+--------------------------------------------------------+
+max_date	         |  The most recent Earth date from which photos exist    |
+------------------+--------------------------------------------------------+
+total_photos	   |  Number of photos taken by that Rover                  |
+------------------+--------------------------------------------------------+
+
+parameters  :
+------------+--------+----------+-------------------------------------------+
+Parameter	|Type	   |Default	  |Description                                |------------+--------+----------+-------------------------------------------+
+sol	      |int	   |none	     |sol(ranges from 0 to max found in endpoint)|
+------------+--------+----------+-------------------------------------------+
+camera	   |string	|all	     |see table above for abbreviations          |
+------------+--------+----------+-------------------------------------------+
+page	      |int	   |1	        |25 items per page returned                 |
+------------+--------+----------+-------------------------------------------+
+api_key	   |string	|DEMO_KEY  |api.nasa.gov key for expanded usage        |
+------------+--------+----------+-------------------------------------------+
+
+
+An example entry from a sol at /manifests/Curiosity might look like:
+
+{sol: 0, total_photos: 3702, cameras: [ "CHEMCAM", "FHAZ", "MARDI", "RHAZ"]}
+
+This would tell you that this rover, on sol 0, took 3702 photos, and those are from among the CHEMCAM, FHAZ, MARDI, and RHAZ cameras.
+
+object definition =
+---------------+------------------------------------------------------------+
+Key	         |Description                                                 |
+---------------+------------------------------------------------------------+
+sol	         |Martian sol of the Rover's mission                          |
+---------------+------------------------------------------------------------+
+total_photos	|Number of photos taken by that Rover on that sol            |
+---------------+------------------------------------------------------------+
+cameras	      |Cameras for which there are photos by that Rover on that sol|
+---------------+------------------------------------------------------------+
+
+
+Querying by Earth date:
+----------+----------+--------+---------------------------------------------+
+Parameter |Type	   |Default |Description                                  |
+----------+----------+--------+---------------------------------------------+
+earth_date|YYYY-MM-DD|none	   |corresponding date on earth for the given sol|
+----------+----------+--------+---------------------------------------------+
+camera	 |string 	|all	   |see table above for abbreviations            |
+----------+----------+--------+---------------------------------------------+
+page	    | int	   |1	      |25 items per page returned                   |
+----------+----------+--------+---------------------------------------------+
+api_key	 | string	|DEMO_KEY|api.nasa.gov key for expanded usage          |
+----------+----------+--------+---------------------------------------------+
+
+Example query:
+
+https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2021-5-19&api_key=pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY
