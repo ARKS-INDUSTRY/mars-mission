@@ -1,13 +1,6 @@
 ------------------------------------------------------------------
-                        Data for mars weather
-
-api key  = pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY
-
-api link to get the json data from nasa = https://api.nasa.gov/insight_weather/?api_key=_YOUR_API_KEY_&feedtype=json&ver=1.0
-
-api link for checking test results = https://api.nasa.gov/insight_weather/?api_key=pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY=json&ver=1.0
-
-
+                   mask detection
+    link: https://teachablemachine.withgoogle.com/models/r2yv466NU/
 ------------------------------------------------------------------
                         Data for rover images
 rover api link = https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=_CAMARA_TYPE_&api_key=API_KEY
