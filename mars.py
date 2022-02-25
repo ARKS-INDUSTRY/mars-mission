@@ -9,6 +9,7 @@ base_url = "https://api.nasa.gov/mars-photos/api/v1/rovers"
 root = Tk()
 root.title("Mars Mission")
 root.geometry("550x600")
+root.iconbitmap('icon.ico')
 def mars_images(rover, camera, sol):
    url = f"{base_url}/{rover}/photos?sol={sol}&camera={camera}&api_key={api}"
    data = requests.get(url)
