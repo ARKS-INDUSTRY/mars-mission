@@ -32,7 +32,7 @@ def save_img():
    count += 1
    filename = f"data/{count}.jpeg"
    urllib.request.urlretrieve(Url, filename)
-heading = Label(root, text="Mars Mission! To the moon", font=("helvetica", 30))
+heading = Label(root, text="Mars Mission! To the mars", font=("helvetica", 30))
 heading.pack(pady=10)
 def main_tab():
    global sol, default_rover, default_cam, sol_entry, main_frame, label_rover, cam_selection, sol_label, rover_selection, get_data_btn
@@ -86,7 +86,7 @@ def result_tab():
    data_list = mars_images(rover, cam, sol)
    l = len(data_list)
    if l == 0:
-      showerror("invalid sol", "the entered sol is not proper")
+      showerror("invalid sol", "the entered sol is not propert\nno data availableon this sol try another sol")
    else:
       pass
    listbox = Listbox(root, width=55, height=15, font=("aharoni", 10))
