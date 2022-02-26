@@ -99,10 +99,11 @@ def clear_result():
     go_back_btn.destroy()
     save_btn.destroy()
     y_scrollbar.destroy()
+    x_scrollbar.destroy()
 
 def result_tab():
    clear_main()
-   global listbox, go_back_btn, save_btn, y_scrollbar, frame
+   global listbox, go_back_btn, save_btn, y_scrollbar, frame, x_scrollbar
    data_list = mars_images(rover, cam, sol)
    l = len(data_list)
    if l == 0:
