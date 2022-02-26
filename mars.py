@@ -1,8 +1,12 @@
+from stat import filemode
+from time import time
 import urllib.request
 import requests
 from tkinter import *
+from PIL import Image
 from tkinter.messagebox import *
 import os
+import time
 import shutil
 api = "pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY"
 base_url = "https://api.nasa.gov/mars-photos/api/v1/rovers"
@@ -28,9 +32,13 @@ def save_img():
    url_list = listbox.curselection()
    for i in url_list:
        Url = listbox.get(i)
+   print(Url)
    count += 1
    filename = f"data/{count}.jpeg"
    urllib.request.urlretrieve(Url, filename)
+   time.sleep(2)
+   img = Image.open(filename)
+   img.show()
 heading = Label(root, text="Mars Mission! To the mars", font=("helvetica", 30))
 heading.pack(pady=10)
 def main_tab():
@@ -85,7 +93,7 @@ def result_tab():
    data_list = mars_images(rover, cam, sol)
    l = len(data_list)
    if l == 0:
-      showerror("invalid sol", "the entered sol is not propert\nno data availableon this sol try another sol")
+      showerror("invalid sol", "the entered sol is not proper")
    else:
       pass
    listbox = Listbox(root, width=55, height=15, font=("aharoni", 10))
