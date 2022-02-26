@@ -28,7 +28,6 @@ def save_img():
    url_list = listbox.curselection()
    for i in url_list:
        Url = listbox.get(i)
-   print(Url)
    count += 1
    filename = f"data/{count}.jpeg"
    urllib.request.urlretrieve(Url, filename)
