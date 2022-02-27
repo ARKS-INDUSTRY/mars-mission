@@ -8,7 +8,8 @@ rover api link = https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos
 
 
 
-Abbreviation	|Camera	                       |Curiosity|OpportunitY|Spirit|
+Abbreviation	|Camera|Curiosity|OpportunitY|Spirit|
+| ------------- |:-------------:| -----:|
 FHAZ	         |Front Hazard Avoidance Camera|✔	|✔|✔|
 RHAZ	         |Rear Hazard Avoidance Camera	|✔|✔|✔|
 MAST	         |Mast Camera	                 |✔| | |
