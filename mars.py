@@ -1,4 +1,5 @@
 from time import time
+from tkinter.tix import MAX
 import urllib.request
 import requests
 from tkinter import *
@@ -7,7 +8,7 @@ from tkinter.messagebox import *
 import os
 import time
 import shutil
-
+from functools import lru_cache
 
 api = "pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY"
 base_url = "https://api.nasa.gov/mars-photos/api/v1/rovers"
@@ -16,7 +17,7 @@ root.title("Mars Mission")
 root.geometry("550x600")
 root.iconbitmap('icon.ico')
 
-
+@lru_cache(maxsize=100)
 def mars_images(rover, camera, sol):
    url = f"{base_url}/{rover}/photos?sol={sol}&camera={camera}&api_key={api}"
    data = requests.get(url)
@@ -132,4 +133,3 @@ def result_tab():
 
 main_tab()
 root.mainloop()
-#this code was written by Rakesh, Arvind, Abhishek 
