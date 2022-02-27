@@ -1,40 +1,34 @@
-------------------------------------------------------------------
-                   mask detection
+<hr>
+#                   mask detection
     link: https://teachablemachine.withgoogle.com/models/r2yv466NU/
-------------------------------------------------------------------
+    [click here]('https://teachablemachine.withgoogle.com/models/r2yv466NU/')
+<hr>
                         Data for rover images
 rover api link = https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=_CAMARA_TYPE_&api_key=API_KEY
 
 
----------------+-----------------------------+---------+-----------+------+
-Abbreviation	|Camera	                     |Curiosity|OpportunitY|Spirit|
----------------+-----------------------------+---------+-----------+------+
-FHAZ	         |Front Hazard Avoidance Camera|	✔	    |     ✔	   |   ✔  |
----------------+-----------------------------+---------+-----------+------+
-RHAZ	         |Rear Hazard Avoidance Camera	|  ✔	    |     ✔	   |   ✔  |
----------------+-----------------------------+---------+-----------+------+
-MAST	         |Mast Camera	               |  ✔      |           |      |
----------------+-----------------------------+---------+-----------+------+
-CHEMCAM	      |Chemistry and Camera Complex	|  ✔      |           |      |
----------------+-----------------------------+---------+-----------+------+
-MAHLI	         |Mars Hand Lens Imager	      |  ✔      |           |      |
----------------+-----------------------------+---------+-----------+------+
+
+Abbreviation	|Camera	                       |Curiosity|OpportunitY|Spirit|
+FHAZ	         |Front Hazard Avoidance Camera|✔	|✔|✔|
+RHAZ	         |Rear Hazard Avoidance Camera	|✔|✔|✔|
+MAST	         |Mast Camera	                 |✔| | |
+CHEMCAM	      |Chemistry and Camera Complex	 | ✔| | |
+MAHLI	         |Mars Hand Lens Imager	       |  ✔      |           |      |
 MARDI	         |Mars Descent Imager	         |  ✔      |           |      |
----------------+-----------------------------+---------+-----------+------+
-NAVCAM	      |Navigation Camera	         |  ✔      |      ✔	|    ✔  |
----------------+-----------------------------+---------+-----------+--------+
-PANCAM	      |Panoramic Camera	            |         |      ✔    |     ✔ |
----------------+-----------------------------+---------+-----------+--------+
-MINITES	      |Miniature                    |         |       ✔	 |    ✔  |
----------------+-----------------------------+---------+-----------+--------+
+NAVCAM	      |Navigation Camera	           |  ✔      |      ✔	  |  ✔   |
+PANCAM	      |Panoramic Camera	             |         |      ✔    |   ✔ |
+MINITES	      |Miniature                     |         |       ✔	 |  ✔  |
 
 camera types
 
 FHAZ= https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=fhaz&api_key=pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY
+[FHAZ]('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=fhaz&api_key=pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY')
 
 RHAZ = https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=rhaz&api_key=pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY
+[RHAZ]('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=rhaz&api_key=pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY')
 
 MAST = https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=mast&api_key=pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY
+[MAST]('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=mast&api_key=pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY')
 
 CHEMCAM = https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=chemcam&api_key=pIrdFhGHvCOBVwFYeOXvw5PFAxBAUZN2zyCPhPfY
 
